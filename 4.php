@@ -153,7 +153,26 @@ $discrible = $_POST["discrible"];//长度过长需要切割，暂时没做以后
 $str = "活动标题：{$title}|活动介绍：{$discrible}|开始时间：{$stime} 结束时间：{$etime}|活动地址：{$address}|截止日期{$end}|人数:{$count}";
 $fname = $_SESSION['filename'];
 $img = createWordsWatermark($fname, $str, 
-    '12', '255,1,1', '5', '', '0', 'image/4.jpg');
+    '12', '255,1,1', '5', '', '0', $fname);
+
+
+
+$conn = @mysql_connect("localhost","root","root");
+if (!$conn){
+    die("连接数据库失败：" . mysql_error());
+}
+mysql_select_db("posterinfo", $conn);
+mysql_query("set names 'gbk'");     //为避免中文乱码做入库编码转换
+mysql_query("set names 'utf8'");    //PHP 文件为 utf-8 格式时使用
+$sql = "INSERT INTO info (title,stime,etime,address,count,deadline,discrible,url)
+VALUES ('$title','$stime','$etime','$address','$count','$end','$discrible','$fname')";
+
+//exit($sql);                           //退出程序并打印 SQL 语句，用于调试
+if(!mysql_query($sql,$conn)){
+    //echo "添加数据失败：".mysql_error();
+} else {
+   // echo "添加数据成功！";
+}
 //$imgurl, $text, $fontSize='14', $color='0,0,0', $point='1', $font = 'simhei.ttf', $angle=0, $newimgurl=''
 /*
 $img = createWordsWatermark('image/3.jpg', '讲座题目:Nonlinear microresonators: towards integrated ultrafast optical clocks|讲座人简介:Dr. Chu has been involved in the research and development of optical waveguide devices|and he spent a decade in the US in the commercialization of high-index-contrast planar lightwave circuits|He has over 100 publications and had seminal contributions on both the numerical simulation methods |and the realization of optical waveguide devices. Dr. Chu returned to his birthplace in the fall of 2010 |and joined the City University of Hong Kong as an Associate Professor.   |讲座人:Sai Tak Chu 副教授  City University of Hong Kong|讲座时间：11月6日（星期五）|讲座地点：北大C栋125教室|邀请人: 李倩老师', 
