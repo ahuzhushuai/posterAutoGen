@@ -276,7 +276,7 @@
                             <label for="" class="control-label">时间</label>
 
                             <div class="col-xs-5">
-                                <input type="text" id="sTime" name="sTime" class="time_d form-control form_check"   value="" placeholder="开始时间" required=""><div class=" show_info"><div class="send red"><div class="arrow"></div>不能为空！</div></div>
+                                <input type="text" id="sTime" name="sTime" class="time_d form-control form_check"   value="" placeholder="开始时间" required=""><div class=" show_info"></div>
                             </div>
 
                             <div class="col-xs-5">

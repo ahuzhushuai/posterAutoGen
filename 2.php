@@ -59,7 +59,7 @@ if(move_uploaded_file($_FILES['upfile']['tmp_name'], $uploadfile1))
    
   }
   $_SESSION['filename']=$uploadfile1;
-  header("location: http://localhost/imagehandle/demo/3.php");
+  header("location: http://localhost/PosterAutoGen/3.php");
 ?>
 
 
