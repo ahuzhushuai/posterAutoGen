@@ -259,18 +259,7 @@
                         </div>
 
 
-                        <div class="form-group ">
-                            <label for="type_id" class="control-label">分类</label>
-
-                            <div class="col-xs-5">
-                                <select id="type_id" name="type_id" class="form-control ">
-                                    <option value="1">
-                                        慈善活动                                        </option>                                </select>
-                            </div>
-
-
-                        </div>
-
+                      
 
                         <div class="form-group  has-feedback">
                             <label for="" class="control-label">时间</label>
@@ -332,7 +321,7 @@
 <script type="text/javascript" charset="utf-8" src="./添加活动——活动_files/ueditor.all.min.js"></script>
                             </div>
                         </div>
-                        <div class="form-group  has-feedback">
+                       <!--  <div class="form-group  has-feedback">
                             <label for="deadline" class="control-label">位置</label>
 
                             <div class="col-xs-10">
@@ -351,7 +340,7 @@
                                 <input type="text" name="size" id="size">
                             </div>
 
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <div class="col-xs-2" style="margin-left: 50px;">
                                 <button type="submit" class="btn btn-primary " href="/opensns1/index.php?s=/event/index/dopost.html" style="padding: 5px 20px 5px 32px;letter-spacing: 12px;font-size: 14px;">提交

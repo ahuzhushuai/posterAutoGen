@@ -204,7 +204,7 @@
                     <ul class="nav navbar-nav">
                                                         <!--一级菜单-->
                                 <li id="tab_home" class="active"><a href="http://localhost/opensns1/index.php?s=/event/index/index.html" class="">
-                                                                        海报制作</a></li>                                <!--一级菜单-->
+                                                                        海报墙</a></li>                                <!--一级菜单-->
                                 <li id="tab_myevent" class=""><a href="http://localhost/opensns1/index.php?s=/event/index/myevent.html" class="">
                                                                         我的活动</a></li>                    </ul>
                                     </div>
